@@ -48,7 +48,7 @@ public class TutorialController {
 
   @PostMapping
   public ResponseEntity<Tutorial> createTutorial(@RequestBody final Tutorial tutorial) {
-    return ResponseEntity.ok(tutorialService.createTutorial(tutorial));
+    return ResponseEntity.status(201).body(tutorialService.createTutorial(tutorial));
   }
 
   @PutMapping("/{id}")
